@@ -4,7 +4,8 @@ from typing import Optional
 import re
 import os
 
-API_KEY = os.getenv("API_KEY", "test123")
+API_KEY = os.getenv("API_KEY")
+
 
 app = FastAPI(title="Agentic Honey-Pot API")
 
