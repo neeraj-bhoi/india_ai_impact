@@ -56,6 +56,13 @@ class ScamMessage(BaseModel):
     message: str
 
 
+@app.get("/honeypot")
+def honeypot_status():
+    return {
+        "status": "Honeypot API is live. Use POST /honeypot to send messages."
+    }
+
+
 @app.post("/honeypot")
 def honeypot_endpoint(
     data: ScamMessage,
